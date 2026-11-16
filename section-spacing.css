@@ -1,0 +1,17 @@
+/* Compact transitions: eliminate excessive whitespace at section boundaries. */
+body:not(.locked) main > .section{padding-top:18px!important;padding-bottom:18px!important;margin-top:0!important;margin-bottom:0!important}
+body:not(.locked) main > .hero{padding-top:25px!important;padding-bottom:20px!important;min-height:0!important}
+body:not(.locked) main > .couple-section{padding-top:20px!important;padding-bottom:20px!important;min-height:0!important}
+body:not(.locked) main > .details-section{padding-top:22px!important;padding-bottom:24px!important}
+body:not(.locked) main > .section .section-heading{margin-bottom:20px!important}
+body:not(.locked) main > .section .section-heading h2{margin:4px 0 7px!important}
+body:not(.locked) main > .section .ornament{margin:3px 0 7px!important}
+body:not(.locked) footer.footer{padding-top:28px!important;padding-bottom:25px!important}
+@media(max-width:680px){
+body:not(.locked) main > .section{padding-top:16px!important;padding-bottom:16px!important}
+body:not(.locked) main > .hero{padding-top:20px!important;padding-bottom:18px!important}
+body:not(.locked) main > .couple-section{padding-top:17px!important;padding-bottom:17px!important;gap:16px!important}
+body:not(.locked) main > .details-section{padding-top:19px!important;padding-bottom:20px!important}
+body:not(.locked) main > .section .section-heading{margin-bottom:16px!important}
+body:not(.locked) footer.footer{padding-top:24px!important}
+}

@@ -1,0 +1,13 @@
+/* Royal blue botanical stationery refinement */
+.letter-opening{background:radial-gradient(ellipse at 50% 42%,#718ca7 0%,#344f70 48%,#172d4b 100%)!important}
+.letter-opening:before{opacity:.32!important;background:radial-gradient(ellipse at 0% 0%,#d5e5f7 0%,transparent 36%),radial-gradient(ellipse at 100% 100%,#aec6e1 0%,transparent 34%)!important}
+.letter-opening:after{content:'❦';position:absolute;right:-4vw;bottom:-14vw;font-family:Georgia,serif;font-size:min(58vw,650px);color:#d5e6f7;opacity:.16;transform:rotate(-38deg);pointer-events:none}
+.letter-scene:before{content:'❦';position:absolute;left:-22vw;top:-24vh;font-family:Georgia,serif;font-size:min(50vw,570px);color:#dce8f4;opacity:.19;transform:rotate(145deg);pointer-events:none}
+.letter-envelope{filter:drop-shadow(0 22px 26px #0b1d36a0)!important}
+.letter-back{background:repeating-linear-gradient(30deg,#f8f5ee 0px,#f8f5ee 3px,#f5f1e8 4px,#faf7f0 8px)!important;box-shadow:inset 0 0 28px #b9ac9466,0 0 0 7px #f7f3eb20!important}
+.letter-left{background:linear-gradient(120deg,#fefbf4,#e4dbcc 90%)!important;filter:drop-shadow(2px 0 2px #8f857346)}
+.letter-right{background:linear-gradient(240deg,#fffdf7,#e5dccf 90%)!important;filter:drop-shadow(-2px 0 2px #8f857346)}
+.letter-bottom{background:linear-gradient(0deg,#ede7da,#fffdf6 80%)!important;filter:drop-shadow(0 -4px 4px #81796b5e)!important}
+.letter-flap{background:repeating-linear-gradient(25deg,#fffcf6 0px,#fffcf6 4px,#f9f5ed 6px,#fffdf7 10px)!important;filter:drop-shadow(0 7px 5px #766c5b66)!important}
+.letter-subtitle{color:#f3f6fb!important;text-shadow:0 2px 8px #142c5270}
+@media(max-width:680px){.letter-scene:before{left:-38vw;top:-19vh}.letter-opening:after{right:-23vw;bottom:-12vh}}

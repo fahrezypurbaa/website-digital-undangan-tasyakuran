@@ -1,0 +1,29 @@
+
+/* Envelope invitation opening — bespoke paper and botanical wax seal */
+.envelope-opening{display:flex;flex-direction:column;justify-content:flex-start;overflow-y:auto;overflow-x:hidden;background:#f4f4ef;padding:0;z-index:100}
+.envelope-paper{position:relative;isolation:isolate;width:100%;min-height:52vh;min-height:52svh;background:radial-gradient(ellipse at 25% 10%,#fff 0%,transparent 50%),radial-gradient(ellipse at 80% 85%,#e9ece7 0%,transparent 65%),repeating-linear-gradient(28deg,#f7f7f4 0px,#f7f7f4 3px,#f4f4f0 4px,#f8f8f5 8px);box-shadow:0 14px 35px #26342c1a}
+.envelope-flap{position:absolute;z-index:0;inset:0 0 auto;height:77%;background:linear-gradient(155deg,#fffefb 0%,#f4f5f1 50%,#e7e9e5 100%);clip-path:polygon(0 0,100% 0,50% 100%);filter:drop-shadow(0 8px 8px #0002)}
+.envelope-paper:before,.envelope-paper:after{content:'';position:absolute;z-index:0;bottom:0;width:51%;height:70%;background:linear-gradient(145deg,#fff,#e9ebe7);pointer-events:none}
+.envelope-paper:before{left:0;clip-path:polygon(0 0,100% 100%,0 100%)}
+.envelope-paper:after{right:0;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.paper-content{position:relative;z-index:1;text-align:center;padding:clamp(30px,5vh,65px) 18px 0;color:#56634d}
+.envelope-kicker{font-size:clamp(.65rem,1.4vw,.95rem);font-weight:300;letter-spacing:.2em}
+.paper-content h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,8vw,7rem);letter-spacing:.035em;line-height:1.05;margin:12px 0}
+.paper-content h1 em{font-style:normal;font-size:.75em}
+.envelope-event{font-size:clamp(.57rem,1.1vw,.78rem);letter-spacing:.19em;margin-top:8px;color:#687563}
+.wax-button{position:absolute;z-index:3;left:50%;bottom:-13px;transform:translateX(-50%);border:0;background:transparent;color:#50644b;padding:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.wax-outer{display:grid;place-items:center;width:clamp(125px,16vw,185px);height:clamp(125px,16vw,185px);border-radius:46% 54% 48% 52% / 53% 43% 57% 47%;background:conic-gradient(from 30deg,#536e4b,#98a98a,#41573d,#738d67,#b6c4a6,#526a4b,#33482f,#8aa27c,#536e4b);box-shadow:inset 4px 5px 10px #ffffff7a,inset -8px -9px 15px #243b2680,0 8px 18px #1d302c45;transform:rotate(-12deg);transition:transform .35s,box-shadow .35s}
+.wax-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;width:79%;height:79%;border-radius:50%;border:2px solid #4d6646;outline:1px solid #a3b39b;outline-offset:3px;background:radial-gradient(circle at 35% 30%,#aab99d,#7e9773 55%,#5b7653);font-family:var(--serif);font-size:2.9rem;color:#3c5738;text-shadow:1px 1px #d8e1cd;box-shadow:inset 3px 3px 8px #d4e0c680,inset -4px -4px 9px #314a3280}
+.wax-inner span{font-family:var(--script);font-size:1.4rem;line-height:.3}.wax-inner small{font-size:1.2rem;line-height:1.2}
+.wax-instruction{font-size:.66rem;letter-spacing:.17em;color:#50644b;background:#f7f8f5e8;padding:2px 10px;white-space:nowrap}
+.wax-button:hover .wax-outer,.wax-button:focus-visible .wax-outer{transform:rotate(0) scale(1.07);box-shadow:inset 4px 5px 10px #ffffff7a,inset -8px -9px 15px #243b2680,0 14px 30px #1d302c60}
+.opening-photo{position:relative;flex:1;min-height:48vh;min-height:48svh;width:100%;background:#dbe5eb url('./assets/couple-portrait.jpg') center 35%/cover no-repeat}
+.opening-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,#f4f4ef 0%,transparent 18%,transparent 55%,#142c52b3 100%)}
+.opening-photo-caption{position:absolute;bottom:clamp(18px,5vh,55px);left:0;right:0;display:grid;justify-items:center;color:#fff;text-shadow:0 2px 10px #0007}
+.opening-photo-caption span{font-size:.66rem;letter-spacing:.3em}
+.opening-photo-caption strong{font-family:var(--script);font-size:clamp(2.7rem,5vw,4.4rem);font-weight:400;line-height:1.25}
+.opening-photo-caption small{letter-spacing:.25em;font-size:.7rem}
+.envelope-opening.closed .envelope-paper{animation:envelope-release .8s ease both}
+@keyframes envelope-release{to{transform:translateY(-35px);opacity:.7}}
+@media(max-width:680px){.envelope-paper{min-height:49svh}.envelope-flap{height:78%}.paper-content{padding-top:clamp(35px,6vh,75px)}.paper-content h1{font-size:clamp(2.65rem,9vw,4.5rem)}.envelope-kicker{font-size:.58rem;letter-spacing:.13em}.envelope-event{font-size:.57rem;letter-spacing:.09em}.wax-outer{width:120px;height:120px}.wax-inner{font-size:2.2rem}.wax-instruction{font-size:.52rem;letter-spacing:.09em}.opening-photo{min-height:51svh;background-position:center 30%}.opening-photo-caption{bottom:22px}}
+@media(max-height:680px){.envelope-paper{min-height:57svh}.opening-photo{min-height:43svh}.wax-outer{width:105px;height:105px}.wax-inner{font-size:2rem}}

@@ -1,0 +1,21 @@
+/* Watercolor-inspired botanical side compositions. Decorative, non-interactive. */
+main{position:relative;isolation:isolate}
+main>.section{position:relative;overflow:hidden}
+main>.section:before,main>.section:after{content:"";position:absolute;z-index:0;pointer-events:none;width:clamp(115px,17vw,280px);height:clamp(260px,39vw,530px);opacity:.57;background-repeat:no-repeat;background-position:center;background-size:contain;filter:drop-shadow(0 8px 12px #142c520b)}
+main>.section:before{left:max(-75px,calc((100vw - 1520px)/2 - 20px));top:6%;background-image:url('./assets/floral-left.svg')}
+main>.section:after{right:max(-75px,calc((100vw - 1520px)/2 - 20px));bottom:2%;background-image:url('./assets/floral-right.svg')}
+main>.section:nth-child(even):before{transform:rotate(-12deg);top:24%;opacity:.49}
+main>.section:nth-child(even):after{transform:rotate(11deg);bottom:14%;opacity:.53}
+main>.section>*{position:relative;z-index:1}
+.illustrated-gallery:before,.illustrated-gallery:after{opacity:.62!important}
+@media(max-width:1050px){main>.section:before,main>.section:after{width:140px;opacity:.38;filter:none}main>.section:before{left:-85px}main>.section:after{right:-85px}}
+@media(max-width:680px){main>.section:before,main>.section:after{width:95px;height:210px;opacity:.35!important}main>.section:before{left:-53px;top:4%}main>.section:after{right:-53px;bottom:4%}}
+@media(prefers-reduced-motion:no-preference){main>.section:before,main>.section:after{animation:botanical-breathe 9s ease-in-out infinite alternate}main>.section:after{animation-delay:-4s}@keyframes botanical-breathe{from{translate:0 0}to{translate:0 -9px}}}
+
+/* Layered botanical framing: richer edges, quiet central reading area. */
+main>.section{background-image:radial-gradient(ellipse 19% 43% at 0% 53%,rgba(198,214,232,.19),transparent 100%),radial-gradient(ellipse 19% 43% at 100% 48%,rgba(198,214,232,.17),transparent 100%)}
+main>.section::before,main>.section::after{width:clamp(155px,20vw,320px);height:clamp(330px,46vw,620px)}
+main>.section:nth-child(3n)::before{transform:scaleX(-1) rotate(9deg);top:10%}
+main>.section:nth-child(3n)::after{transform:scaleX(-1) rotate(-8deg);bottom:6%}
+@media(max-width:1050px){main>.section::before,main>.section::after{width:155px;height:330px}}
+@media(max-width:680px){main>.section::before,main>.section::after{width:105px;height:225px;opacity:.31!important}main>.section{background-image:none}}

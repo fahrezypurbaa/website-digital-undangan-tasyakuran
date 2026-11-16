@@ -1,0 +1,9 @@
+.wedding-film{position:relative;width:100%;max-width:none;margin:0;padding:0;overflow:hidden;background:#142c52;line-height:0;isolation:isolate}
+.wedding-film__video{display:block;width:100%;height:auto;aspect-ratio:848/480;object-fit:cover;object-position:center;background:#142c52}
+@media(max-width:680px){.wedding-film{width:100%;margin:0}.wedding-film__video{width:100%;height:auto;aspect-ratio:848/480;object-fit:contain}}
+
+/* Delicate editorial framing above and below the cinematic film */
+.wedding-film{border-top:7px solid #e9eff6;border-bottom:7px solid #e9eff6}
+.wedding-film::before,.wedding-film::after{content:"";position:absolute;z-index:2;left:50%;transform:translateX(-50%);width:min(240px,48vw);height:1px;background:linear-gradient(90deg,transparent,#7895b8 28%,#c6d6e8 50%,#7895b8 72%,transparent);pointer-events:none}
+.wedding-film::before{top:3px}.wedding-film::after{bottom:3px}
+@media(max-width:680px){.wedding-film{border-top-width:5px;border-bottom-width:5px}.wedding-film::before{top:2px}.wedding-film::after{bottom:2px}}
