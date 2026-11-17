@@ -13,3 +13,6 @@
 .story-pagination button.active{width:25px;border-radius:6px;background:#142c52}
 @media(max-width:680px){.story-carousel{width:100%}.story-slide img{max-height:65vh}.story-arrow{width:31px;height:31px;font-size:23px}.story-prev{left:5px}.story-next{right:5px}.story-slide figcaption{padding-bottom:28px}}
 @media(prefers-reduced-motion:reduce){.story-track,.story-slide img,.story-arrow,.story-pagination button{transition:none!important}}
+
+/* Keep the gallery heading on a single line across mobile and desktop. */
+#gallery-title{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;font-size:clamp(1.35rem,5.3vw,3.4rem)!important;letter-spacing:-.035em!important;max-width:100%!important}
