@@ -108,3 +108,8 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
 @media(max-width:900px){
  main>.hero>.hero-photo{margin-top:10px!important}
 }
+
+/* More separation above the full uncropped landscape image on phones. */
+@media(max-width:900px){
+ main>.hero>.hero-photo{margin-top:32px!important}
+}
