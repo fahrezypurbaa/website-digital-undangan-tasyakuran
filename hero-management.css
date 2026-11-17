@@ -84,3 +84,8 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
  main>.hero .date-line,main>.hero .countdown,main>.hero .btn{grid-column:1!important}
 }
 @media(max-width:360px){main>.hero>.hero-photo{width:calc(100% + 20px)!important;margin-left:-10px!important;margin-right:-10px!important}}
+
+/* Mobile portrait framing correction: keep both heads fully visible in the landscape crop. */
+@media(max-width:900px){
+ main>.hero>.hero-photo .portrait-frame img{object-position:center top!important;aspect-ratio:16/10!important}
+}
