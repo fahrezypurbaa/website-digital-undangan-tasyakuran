@@ -34,3 +34,30 @@
 .hero-title-group .management-invite__name::after{transform:rotate(180deg)}
 .hero-title-group .management-invite__message{font-family:inherit;font-size:clamp(.64rem,1vw,.86rem);font-weight:500;letter-spacing:.13em;text-transform:uppercase;line-height:1.5;color:#142c52}
 @media(max-width:900px){.hero-title-group .management-invite{gap:4px;margin-bottom:8px}.hero-title-group .management-invite__name{font-size:clamp(.76rem,3vw,1rem);letter-spacing:.045em;gap:7px}.hero-title-group .management-invite__name::before,.hero-title-group .management-invite__name::after{max-width:32px}.hero-title-group .management-invite__message{font-size:clamp(.53rem,2.1vw,.73rem);letter-spacing:.065em;line-height:1.35;max-width:340px}}
+
+/* Match reference composition: full-width centered invitation, rule lines, boxed split headline. */
+main>.hero{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr)!important;column-gap:clamp(16px,3vw,48px)!important;row-gap:clamp(12px,2vw,24px)!important;align-items:center!important}
+main>.hero>.hero-title-group{grid-column:1/-1;grid-row:1;width:100%;min-width:0;z-index:2;text-align:center}
+main>.hero>.hero-title-group .hero-title-group-inner{width:100%;display:flex;flex-direction:column;align-items:center;gap:0}
+main>.hero>.hero-title-group .management-invite{width:100%;max-width:none;margin:0 auto 15px!important;gap:7px!important}
+main>.hero>.hero-title-group .management-invite__name{font-family:Georgia,serif;font-weight:700;font-size:clamp(1.1rem,2.65vw,2.4rem)!important;letter-spacing:clamp(.12em,.6vw,.28em)!important;line-height:1.2;text-transform:none;color:#7394b9;white-space:nowrap}
+main>.hero>.hero-title-group .management-invite__name::before,main>.hero>.hero-title-group .management-invite__name::after{max-width:none;min-width:15px;flex:1;background:#9eb4ce;height:2px}
+main>.hero>.hero-title-group .management-invite__message{font-size:clamp(.65rem,1.25vw,1.05rem)!important;letter-spacing:clamp(.08em,.25vw,.23em)!important;line-height:1.45;font-weight:600;text-transform:uppercase;color:#142c52}
+main>.hero>.hero-title-group h2{display:inline-flex;align-items:stretch;justify-content:center;white-space:nowrap!important;font-family:inherit!important;font-size:clamp(1.05rem,2.45vw,2.25rem)!important;line-height:1.1!important;font-weight:800!important;letter-spacing:-.02em!important;text-transform:uppercase!important;margin:0!important;border:1px solid #a5b8d2;max-width:100%}
+main>.hero>.hero-title-group h2 span{padding:clamp(8px,1.2vw,15px) clamp(10px,1.8vw,25px);background:rgba(255,255,255,.88);color:#142c52}
+main>.hero>.hero-title-group h2 span+span{background:#142c52;color:#fff}
+main>.hero>.hero-copy{grid-column:1;grid-row:2;min-width:0}
+main>.hero>.hero-photo{grid-column:2;grid-row:2;min-width:0}
+@media(max-width:900px){
+ main>.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:12px!important;row-gap:10px!important}
+ main>.hero>.hero-copy{display:contents!important}
+ main>.hero>.hero-title-group{grid-column:1/-1;grid-row:1}
+ main>.hero>.hero-title-group .management-invite{gap:5px!important;margin-bottom:10px!important}
+ main>.hero>.hero-title-group .management-invite__name{font-size:clamp(.85rem,3.6vw,1.3rem)!important;letter-spacing:.12em!important}
+ main>.hero>.hero-title-group .management-invite__message{font-size:clamp(.53rem,2vw,.77rem)!important;letter-spacing:.07em!important}
+ main>.hero>.hero-title-group h2{font-size:clamp(.82rem,3.6vw,1.4rem)!important}
+ main>.hero>.hero-title-group h2 span{padding:8px 9px}
+ main>.hero .hero-names{grid-column:1;grid-row:2}
+ main>.hero>.hero-photo{grid-column:2;grid-row:2}
+}
+@media(max-width:360px){main>.hero>.hero-title-group .management-invite__name{font-size:.77rem!important;letter-spacing:.06em!important}main>.hero>.hero-title-group h2{font-size:.78rem!important}main>.hero>.hero-title-group h2 span{padding:7px 6px}}
