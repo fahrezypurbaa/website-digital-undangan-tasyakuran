@@ -103,3 +103,8 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
  main>.hero>.hero-photo .portrait-frame::before{content:none!important;display:none!important}
  main>.hero>.hero-photo .portrait-frame img{width:100%!important;height:100%!important;aspect-ratio:3/2!important;object-fit:cover!important;object-position:center center!important;max-height:none!important}
 }
+
+/* Give the mobile landscape portrait a little breathing room below the names. */
+@media(max-width:900px){
+ main>.hero>.hero-photo{margin-top:10px!important}
+}
