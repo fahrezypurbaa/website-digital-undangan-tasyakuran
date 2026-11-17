@@ -46,3 +46,8 @@
  body:not(.locked) #details .location-coordinate{margin:3px 0!important}
  body:not(.locked) #details .location-copy{margin-top:3px!important}
 }
+/* Prominent wedding countdown without breaking narrow layouts. */
+main>.hero .countdown{gap:clamp(9px,1.8vw,22px)!important}
+main>.hero .countdown strong{font-size:clamp(3rem,5.5vw,5rem)!important;line-height:1.06!important;font-variant-numeric:tabular-nums}
+main>.hero .countdown small{font-size:clamp(.62rem,.85vw,.78rem)!important}
+@media(max-width:760px){main>.hero .countdown{width:100%;gap:clamp(5px,2vw,12px)!important;justify-content:space-evenly!important}main>.hero .countdown div{min-width:0!important;flex:1 1 0}main>.hero .countdown strong{font-size:clamp(2.75rem,12vw,4.1rem)!important}main>.hero .countdown small{font-size:.63rem!important;letter-spacing:.06em!important}main>.hero>.hero-title-group .management-invite__name{white-space:normal!important;text-align:center;letter-spacing:.04em!important;font-size:clamp(.84rem,3.3vw,1.16rem)!important}}
