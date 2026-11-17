@@ -16,3 +16,7 @@
 
 /* Keep the gallery heading on a single line across mobile and desktop. */
 #gallery-title{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;font-size:clamp(1.35rem,5.3vw,3.4rem)!important;letter-spacing:-.035em!important;max-width:100%!important}
+
+/* About section without its former leading photograph. */
+#couple{display:block!important;text-align:center!important}
+#couple .couple-text{width:min(100%,760px)!important;max-width:760px!important;margin-inline:auto!important}
