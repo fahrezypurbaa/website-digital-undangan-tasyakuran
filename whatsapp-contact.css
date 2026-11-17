@@ -1,0 +1,6 @@
+/* Direct WhatsApp contact, safely above the mobile navigation. */
+.wa-contact-float{position:fixed;right:22px;bottom:24px;z-index:900;display:flex;align-items:center;justify-content:center;gap:9px;padding:12px 17px;border:1px solid rgba(20,44,82,.16);border-radius:999px;background:#fff;color:#142c52;text-decoration:none;font:600 12px/1.2 system-ui,-apple-system,sans-serif;letter-spacing:.02em;box-shadow:0 8px 28px rgba(20,44,82,.18);transition:transform .2s,box-shadow .2s}
+.wa-contact-float:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,44,82,.23)}
+.wa-contact-float svg{width:21px;height:21px;flex:none;color:#17875a}
+.wa-contact-float:focus-visible{outline:3px solid #142c52;outline-offset:3px}
+@media(max-width:680px){.wa-contact-float{right:13px;bottom:calc(102px + env(safe-area-inset-bottom,0px));padding:11px 13px;font-size:11px}.wa-contact-float svg{width:20px;height:20px}}
