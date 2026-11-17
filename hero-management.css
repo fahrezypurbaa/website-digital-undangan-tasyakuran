@@ -113,3 +113,13 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
 @media(max-width:900px){
  main>.hero>.hero-photo{margin-top:32px!important}
 }
+
+/* Correct the photo itself, not the spacing beneath the couple's names. */
+@media(max-width:900px){
+ main>.hero{row-gap:9px!important}
+ main>.hero>.hero-photo{margin-top:0!important;margin-bottom:8px!important;transform:none!important;filter:none!important;z-index:3!important}
+ main>.hero>.hero-title-group{z-index:2!important}
+ main>.hero>.hero-photo .portrait-frame{aspect-ratio:auto!important;overflow:visible!important;background:transparent!important}
+ main>.hero>.hero-photo .portrait-frame img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;transform:none!important;clip-path:none!important}
+ main>.hero>.hero-photo .photo-caption{bottom:5px!important}
+}
