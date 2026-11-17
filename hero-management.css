@@ -123,3 +123,9 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
  main>.hero>.hero-photo .portrait-frame img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;transform:none!important;clip-path:none!important}
  main>.hero>.hero-photo .photo-caption{bottom:5px!important}
 }
+
+/* Reference crop: closer waist-up composition with both faces and green books in view. */
+@media(max-width:900px){
+ main>.hero>.hero-photo .portrait-frame{width:100%!important;aspect-ratio:5/4!important;overflow:hidden!important}
+ main>.hero>.hero-photo .portrait-frame img{width:100%!important;height:100%!important;aspect-ratio:5/4!important;object-fit:cover!important;object-position:center 44%!important;max-height:none!important}
+}
