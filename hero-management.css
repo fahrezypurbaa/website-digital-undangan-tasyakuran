@@ -96,3 +96,10 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
  main>.hero>.hero-photo .portrait-frame::before{content:"";position:absolute;inset:-18px;background:url('./assets/couple-portrait.jpg') center center/cover no-repeat;filter:blur(18px) brightness(1.08);opacity:.55;z-index:-1}
  main>.hero>.hero-photo .portrait-frame img{position:relative!important;display:block!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center center!important;z-index:1}
 }
+
+/* Source image is 6000x4000 (native landscape 3:2). Use its actual ratio: no head or book crop, no narrow portrait or blurred bars. */
+@media(max-width:900px){
+ main>.hero>.hero-photo .portrait-frame{aspect-ratio:3/2!important;background:transparent!important;overflow:hidden!important}
+ main>.hero>.hero-photo .portrait-frame::before{content:none!important;display:none!important}
+ main>.hero>.hero-photo .portrait-frame img{width:100%!important;height:100%!important;aspect-ratio:3/2!important;object-fit:cover!important;object-position:center center!important;max-height:none!important}
+}
