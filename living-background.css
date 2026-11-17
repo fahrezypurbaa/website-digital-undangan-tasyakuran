@@ -36,3 +36,21 @@ main>.hero>.wedding-motion-layer~*,main>.section>.wedding-motion-layer~*{positio
 }
 @media(max-width:680px){.wedding-motion-layer .wedding-petal{opacity:.5}.wedding-motion-layer .wedding-glow{width:180px}}
 @media(prefers-reduced-motion:reduce){.wedding-motion-layer .wedding-petal{display:none}.wedding-motion-layer .wedding-glow{animation:none!important}}
+
+/* Layered botanical wedding ambience: visible ornament, subtle depth and twinkling light. */
+.wedding-motion-layer .wedding-floral-silhouette{position:absolute;display:block;width:clamp(150px,24vw,360px);height:clamp(280px,45vw,600px);background-position:center;background-repeat:no-repeat;background-size:contain;opacity:.29;filter:drop-shadow(0 12px 16px rgba(33,66,111,.08));transform-origin:bottom center}
+.wedding-motion-layer .wedding-floral-left{left:-4%;top:3%;background-image:url('./assets/floral-left.svg')}
+.wedding-motion-layer .wedding-floral-right{right:-4%;bottom:0;background-image:url('./assets/floral-right.svg')}
+.wedding-motion-layer .wedding-sparkle{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;background:#8eafda;box-shadow:0 0 9px 3px rgba(140,180,225,.28);opacity:.4}
+.wedding-motion-layer .wedding-sparkle-star{border-radius:0;clip-path:polygon(50% 0,62% 37%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 37%);background:#9ab8da;box-shadow:none;width:calc(var(--size)*1.8);height:calc(var(--size)*1.8)}
+/* Add a subtle engraved pattern without changing the section layout. */
+body:not(.locked) main>.hero,#rundown,#gallery,#couple,#details{background-blend-mode:normal}
+@media(prefers-reduced-motion:no-preference){
+ .wedding-motion-layer .wedding-sparkle{animation:wedding-twinkle var(--duration) ease-in-out var(--delay) infinite alternate}
+ .wedding-motion-layer .wedding-floral-left{animation:wedding-botanical-sway 9s ease-in-out infinite alternate}
+ .wedding-motion-layer .wedding-floral-right{animation:wedding-botanical-sway 12s ease-in-out -4s infinite alternate-reverse}
+ @keyframes wedding-twinkle{0%{opacity:.12;transform:scale(.5) translateY(4px)}50%{opacity:.9;transform:scale(1.35) translateY(-5px)}100%{opacity:.28;transform:scale(.7) translateY(-9px)}}
+ @keyframes wedding-botanical-sway{from{transform:rotate(-3deg) translateY(9px) scale(.97)}to{transform:rotate(4deg) translateY(-12px) scale(1.04)}}
+}
+@media(max-width:680px){.wedding-motion-layer .wedding-floral-silhouette{width:155px;height:280px;opacity:.23}.wedding-motion-layer .wedding-floral-left{left:-65px}.wedding-motion-layer .wedding-floral-right{right:-65px}.wedding-motion-layer .wedding-sparkle{box-shadow:0 0 5px 2px rgba(140,180,225,.24)}}
+@media(prefers-reduced-motion:reduce){.wedding-motion-layer .wedding-sparkle,.wedding-motion-layer .wedding-floral-silhouette{animation:none!important}}
