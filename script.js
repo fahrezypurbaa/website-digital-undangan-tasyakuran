@@ -13,7 +13,7 @@ const timeline=[
 {time:'11.05–11.08 WIB',icon:'✦',title:'Penutup',desc:'3 menit'},
 {time:'Setelah acara',icon:'♧',title:'Dokumentasi dan Makan Siang',desc:'Silaturahmi dan menikmati hidangan'}
 ];
-$('#timeline').innerHTML=timeline.map(x=>'<article class="timeline-item"><div class="timeline-icon" aria-hidden="true">'+x.icon+'</div><div class="timeline-dot"></div><time>'+x.time+'</time><h3>'+x.title+'</h3><p>'+x.desc+'</p></article>').join('');
+$('#timeline').innerHTML=timeline.map(x=>'<article class="timeline-item"><div class="timeline-dot"></div><time>'+x.time+'</time><h3>'+x.title+'</h3><p>'+x.desc+'</p></article>').join('');
 function tick(){let diff=Math.max(0,date-Date.now());let values=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60];['days','hours','minutes','seconds'].forEach((k,i)=>$('#'+k).textContent=String(values[i]).padStart(2,'0'))}tick();setInterval(tick,1000);
 const opening=$('#opening');function openInvite(){opening.classList.add('closed');document.body.classList.remove('locked');sessionStorage.setItem('inviteOpened','1');setTimeout(()=>opening.setAttribute('aria-hidden','true'),1000)}$('#openInvite').addEventListener('click',openInvite);if(sessionStorage.getItem('inviteOpened')==='1')openInvite();
 $('#menuToggle').addEventListener('click',()=>{let nav=$('#nav');let open=nav.classList.toggle('open');$('#menuToggle').setAttribute('aria-expanded',String(open))});document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{$('#nav').classList.remove('open');$('#menuToggle').setAttribute('aria-expanded','false')}));
