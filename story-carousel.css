@@ -47,3 +47,9 @@
 #gallery .story-slide:not(.is-active) img{transform:none!important}
 #gallery .story-slide.is-active img{transform:none!important}
 @media(max-width:680px){#gallery .story-slide img{height:clamp(320px,112vw,520px)!important;object-fit:cover!important;object-position:center center!important}}
+
+/* Give the celebration bridge and rundown heading a little breathing room. */
+.section-bridge + #rundown{padding-top:95px!important}
+#rundown .section-heading .eyebrow{display:block;margin-bottom:13px!important}
+#rundown .section-heading h2{margin-top:0!important;margin-bottom:17px!important}
+@media(max-width:680px){.section-bridge + #rundown{padding-top:68px!important}#rundown .section-heading .eyebrow{margin-bottom:10px!important}#rundown .section-heading h2{margin-bottom:13px!important}}
