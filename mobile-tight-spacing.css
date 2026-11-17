@@ -27,3 +27,5 @@
  body:not(.locked) .footer-only-management{padding:17px 12px 21px!important}
 }
 @media(max-width:390px){body:not(.locked) #rundown,body:not(.locked) #gallery,body:not(.locked) #couple,body:not(.locked) #rsvp,body:not(.locked) #details{padding-block:13px!important}body:not(.locked) #rundown .rundown-feature{padding:15px!important}}
+
+@media(max-width:760px){#details{padding-top:10px!important;padding-bottom:12px!important}#details .location-editorial{gap:8px!important}#details .location-editorial iframe{height:205px!important}#details .location-info h3{margin:3px 0 5px!important;font-size:2.2rem!important}#details .location-actions{margin:8px 0!important}}
