@@ -1,0 +1,28 @@
+/* Original management logotype, displayed in black without altering the supplied artwork. */
+.site-header .brand-management{display:flex;align-items:center;flex-shrink:0;width:clamp(125px,14vw,195px);height:57px;padding:3px 0!important;line-height:0}
+.site-header .brand-management img{width:100%;height:100%;object-fit:contain;object-position:left center;filter:brightness(0)}
+.footer .footer-management{display:flex;justify-content:center;align-items:center;line-height:0;margin:0 auto 10px!important}
+.footer .footer-management img{width:clamp(145px,22vw,240px);height:auto;filter:brightness(0)}
+/* Keep the desktop composition while allowing the complete heading on one line. */
+@media(min-width:901px){main>.hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr)!important;gap:clamp(20px,3vw,54px)!important}.hero-copy h2{font-size:clamp(2.15rem,3.25vw,4.5rem)!important;white-space:nowrap;line-height:1.12!important}.hero-copy .hero-names{font-size:clamp(3.5rem,5.7vw,6.8rem)!important}}
+/* Mobile: heading across top; names and photo side-by-side; invitation message below both. */
+@media(max-width:900px){
+ main>.hero{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:12px!important;row-gap:8px!important;align-items:center!important;padding:16px 16px 20px!important}
+ main>.hero>.hero-copy{display:contents!important}
+ main>.hero .hero-title-group{grid-column:1/-1;grid-row:1;text-align:center;min-width:0}
+ main>.hero .hero-title-group .eyebrow{display:block;margin:0 0 3px!important;font-size:clamp(.5rem,1.8vw,.65rem)!important}
+ main>.hero .hero-title-group .ornament{margin:0 auto 3px!important}
+ main>.hero .hero-title-group h2{font-size:clamp(1.3rem,4.5vw,2.5rem)!important;line-height:1.15!important;letter-spacing:-.035em!important;white-space:nowrap!important;margin:0!important}
+ main>.hero .hero-names{grid-column:1;grid-row:2;font-size:clamp(2rem,7.6vw,4.2rem)!important;line-height:1.13!important;margin:0!important;text-align:center;min-width:0}
+ main>.hero>.hero-photo{grid-column:2;grid-row:2;min-width:0;width:100%!important;margin:0!important;align-self:center}
+ main>.hero>.hero-photo .portrait-frame{padding:5px!important}
+ main>.hero>.hero-photo .portrait-frame img{display:block;width:100%;height:auto!important;aspect-ratio:3/4;object-fit:cover}
+ main>.hero>.hero-photo .photo-caption{font-size:clamp(.8rem,2.8vw,1.3rem)!important;line-height:1.1!important}
+ main>.hero .hero-message{grid-column:1/-1;grid-row:3;margin:9px 0 0!important;text-align:center}
+ main>.hero .hero-message~p{grid-column:1/-1;margin:2px 0!important;text-align:center}
+ main>.hero .date-line{grid-column:1/-1;justify-self:center;margin:6px 0 0!important}
+ main>.hero .countdown{grid-column:1/-1;justify-self:center;margin:4px 0!important}
+ main>.hero .btn{grid-column:1/-1;justify-self:center;margin:4px 0!important}
+ .site-header .brand-management{width:132px;height:43px}
+}
+@media(max-width:360px){main>.hero{column-gap:6px!important;padding-left:10px!important;padding-right:10px!important}main>.hero .hero-title-group h2{font-size:1.25rem!important}main>.hero .hero-names{font-size:1.85rem!important}}
