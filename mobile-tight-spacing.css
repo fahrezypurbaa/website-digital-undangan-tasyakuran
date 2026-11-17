@@ -29,3 +29,5 @@
 @media(max-width:390px){body:not(.locked) #rundown,body:not(.locked) #gallery,body:not(.locked) #couple,body:not(.locked) #rsvp,body:not(.locked) #details{padding-block:13px!important}body:not(.locked) #rundown .rundown-feature{padding:15px!important}}
 
 @media(max-width:760px){#details{padding-top:10px!important;padding-bottom:12px!important}#details .location-editorial{gap:8px!important}#details .location-editorial iframe{height:205px!important}#details .location-info h3{margin:3px 0 5px!important;font-size:2.2rem!important}#details .location-actions{margin:8px 0!important}}
+
+@media(max-width:760px){body:not(.locked) #rundown .rundown-entry{padding-block:6px!important;min-height:0!important}body:not(.locked) #rundown .rundown-entry-body{gap:4px!important}body:not(.locked) #rundown .rundown-entry-body strong{line-height:1.3!important}body:not(.locked) #rundown .rundown-node:after{height:23px!important}body:not(.locked) #rundown .rundown-entry.is-active .rundown-entry-details{padding:6px 0 2px!important}body:not(.locked) #rundown .fine-note{margin-top:5px!important}body:not(.locked) #rundown .rundown-interactive{gap:8px!important}}
