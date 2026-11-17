@@ -27,3 +27,10 @@
 #details .detail-icon{display:inline-flex!important;align-items:center;justify-content:center}
 #details .detail-icon svg{display:block;width:27px;height:27px;color:#7895b8}
 #rundown .timeline-icon{display:none!important}
+
+/* Equal gallery viewport across all slides: image, captions, arrows and dots stay aligned. */
+.story-track{align-items:stretch!important}
+.story-slide{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important}
+.story-slide img{height:clamp(320px,58vw,680px)!important;max-height:none!important;width:100%!important;object-fit:contain!important;object-position:center center!important;background:#f4f6f9!important}
+.story-slide figcaption{margin-top:auto!important;min-height:53px!important;display:flex!important;justify-content:center!important;align-items:center!important;padding:9px 12px 27px!important}
+@media(max-width:680px){.story-slide img{height:clamp(320px,112vw,520px)!important;max-height:none!important}.story-slide figcaption{min-height:49px!important;padding:8px 8px 26px!important}.story-arrow{top:calc((100% - 49px)/2)!important}}
