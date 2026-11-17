@@ -53,3 +53,7 @@
 #rundown .section-heading .eyebrow{display:block;margin-bottom:13px!important}
 #rundown .section-heading h2{margin-top:0!important;margin-bottom:17px!important}
 @media(max-width:680px){.section-bridge + #rundown{padding-top:68px!important}#rundown .section-heading .eyebrow{margin-bottom:10px!important}#rundown .section-heading h2{margin-bottom:13px!important}}
+
+/* Slightly tighten the gap shown between the celebration ribbon and rundown heading. */
+.section-bridge + #rundown{padding-top:76px!important}
+@media(max-width:680px){.section-bridge + #rundown{padding-top:51px!important}#rundown .section-heading .eyebrow{margin-bottom:7px!important}#rundown .section-heading h2{margin-bottom:10px!important}}
