@@ -61,3 +61,11 @@ main>.hero>.hero-photo{grid-column:2;grid-row:2;min-width:0}
  main>.hero>.hero-photo{grid-column:2;grid-row:2}
 }
 @media(max-width:360px){main>.hero>.hero-title-group .management-invite__name{font-size:.77rem!important;letter-spacing:.06em!important}main>.hero>.hero-title-group h2{font-size:.78rem!important}main>.hero>.hero-title-group h2 span{padding:7px 6px}}
+
+/* Final refinement: classic editorial heading, no split boxes; fill left column with couple names. */
+main>.hero>.hero-title-group h2{display:block!important;border:0!important;background:transparent!important;color:#142c52!important;font-family:Georgia,'Times New Roman',serif!important;font-weight:500!important;font-size:clamp(2rem,3.7vw,4.2rem)!important;line-height:1.12!important;letter-spacing:-.035em!important;text-transform:none!important;white-space:nowrap!important;margin:0 auto!important}
+main>.hero>.hero-title-group h2 span,main>.hero>.hero-title-group h2 span+span{display:inline!important;padding:0!important;background:none!important;color:inherit!important}
+main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
+@media(min-width:901px){main>.hero{grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr)!important}main>.hero>.hero-copy{width:100%!important;max-width:none!important;justify-self:stretch!important}main>.hero .hero-names{font-size:clamp(4.6rem,7.1vw,8.2rem)!important;line-height:1.02!important;letter-spacing:-.055em!important;max-width:100%!important;margin:0 auto 14px!important;overflow:visible!important}}
+@media(max-width:900px){main>.hero>.hero-title-group h2{font-size:clamp(1.45rem,5vw,2.7rem)!important;letter-spacing:-.04em!important}main>.hero .hero-names{font-size:clamp(2.15rem,8.5vw,4.6rem)!important;line-height:1.04!important;letter-spacing:-.055em!important;overflow:visible!important;overflow-wrap:normal!important}}
+@media(max-width:360px){main>.hero>.hero-title-group h2{font-size:1.3rem!important}main>.hero .hero-names{font-size:clamp(1.95rem,8.5vw,2.45rem)!important}}
