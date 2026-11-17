@@ -89,3 +89,10 @@ main>.hero>.hero-title-group h2 span+span::before{content:' ';white-space:pre}
 @media(max-width:900px){
  main>.hero>.hero-photo .portrait-frame img{object-position:center top!important;aspect-ratio:16/10!important}
 }
+
+/* Preserve the entire portrait, including faces, hands and green marriage books. */
+@media(max-width:900px){
+ main>.hero>.hero-photo .portrait-frame{position:relative!important;isolation:isolate!important;aspect-ratio:16/10!important;background:#dce8ef!important}
+ main>.hero>.hero-photo .portrait-frame::before{content:"";position:absolute;inset:-18px;background:url('./assets/couple-portrait.jpg') center center/cover no-repeat;filter:blur(18px) brightness(1.08);opacity:.55;z-index:-1}
+ main>.hero>.hero-photo .portrait-frame img{position:relative!important;display:block!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center center!important;z-index:1}
+}
