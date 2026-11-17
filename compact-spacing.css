@@ -28,3 +28,30 @@ body:not(.locked) .footer{padding-top:clamp(28px,4vw,46px)!important;padding-bot
  body:not(.locked) #couple{gap:20px!important}
  body:not(.locked) #rundown .timeline-item{padding-top:12px!important;padding-bottom:10px!important}
 }
+
+/* Second pass: noticeably denser vertical layout while preserving legibility. */
+body:not(.locked) main>.section:not(.hero){padding-top:clamp(18px,2.4vw,30px)!important;padding-bottom:clamp(20px,2.5vw,32px)!important}
+body:not(.locked) main>.hero{padding-top:clamp(16px,2vw,26px)!important;padding-bottom:clamp(19px,2.6vw,32px)!important}
+body:not(.locked) .section-heading{margin-bottom:12px!important}
+body:not(.locked) .section-heading h2{margin:1px 0 3px!important}
+body:not(.locked) .section-heading .ornament{margin:2px auto!important}
+body:not(.locked) .section-heading p{margin-top:3px!important;line-height:1.42!important}
+body:not(.locked) .hero-copy{padding-top:3px!important;padding-bottom:3px!important}
+body:not(.locked) .hero-copy>*+*{margin-top:5px!important}
+body:not(.locked) .hero-copy p{line-height:1.43!important}
+body:not(.locked) .hero .countdown{margin-bottom:7px!important}
+body:not(.locked) #rundown .timeline-item{padding-top:10px!important;padding-bottom:8px!important}
+body:not(.locked) #rundown .timeline-item h3{margin-top:3px!important;margin-bottom:2px!important}
+body:not(.locked) #rundown .timeline-item p{margin-top:2px!important;line-height:1.4!important}
+body:not(.locked) .fine-note{margin-top:9px!important}
+body:not(.locked) #gallery .gallery-instruction{margin-top:7px!important}
+body:not(.locked) #couple{gap:clamp(12px,2vw,28px)!important}
+body:not(.locked) #couple p,body:not(.locked) #details p{line-height:1.43!important}
+body:not(.locked) .footer{padding-top:24px!important;padding-bottom:18px!important}
+@media(max-width:680px){
+ body:not(.locked) main>.section:not(.hero){padding-top:19px!important;padding-bottom:21px!important}
+ body:not(.locked) main>.hero{padding-top:16px!important;padding-bottom:19px!important}
+ body:not(.locked) .section-heading{margin-bottom:9px!important}
+ body:not(.locked) #couple{gap:13px!important}
+ body:not(.locked) #rundown .timeline-item{padding-top:9px!important;padding-bottom:7px!important}
+}
