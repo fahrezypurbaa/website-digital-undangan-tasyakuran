@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS rsvp_responses (
+id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+guest_name VARCHAR(100) NOT NULL,
+attendance ENUM('Hadir','Tidak hadir') NOT NULL,
+guest_count TINYINT UNSIGNED NOT NULL DEFAULT 0,
+created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+INDEX idx_created_at (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
