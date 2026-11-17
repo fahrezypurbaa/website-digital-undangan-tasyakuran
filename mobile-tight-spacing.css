@@ -1,0 +1,29 @@
+/* Mobile-only rhythm: small, consistent gaps without crowding. */
+@media (max-width:760px){
+ body:not(.locked) main>.section:not(.hero){padding-block:15px!important}
+ body:not(.locked) main>.hero{padding-block:14px!important}
+ body:not(.locked) #rundown,body:not(.locked) #gallery,body:not(.locked) #couple,body:not(.locked) #rsvp,body:not(.locked) #details{padding-top:15px!important;padding-bottom:17px!important}
+ body:not(.locked) .section-bridge{padding-block:2px!important;min-height:0!important}
+ body:not(.locked) .section-heading{margin-bottom:10px!important}
+ body:not(.locked) .section-heading h2{margin:2px 0 3px!important}
+ body:not(.locked) .section-heading p{margin-top:4px!important}
+ body:not(.locked) #rundown .rundown-interactive{gap:12px!important}
+ body:not(.locked) #rundown .rundown-feature{padding:17px 18px!important}
+ body:not(.locked) #rundown .feature-clock{margin:9px 0 2px!important;font-size:clamp(3.1rem,15vw,4rem)!important}
+ body:not(.locked) #rundown .feature-controls{margin-top:11px!important}
+ body:not(.locked) #rundown .feature-controls button{width:37px;height:37px}
+ body:not(.locked) #rundown .rundown-entry{padding-block:10px!important}
+ body:not(.locked) #rundown .fine-note{margin-top:9px!important}
+ body:not(.locked) #gallery .gallery-instruction{margin-top:6px!important}
+ body:not(.locked) #couple{gap:11px!important}
+ body:not(.locked) #couple .couple-text{gap:7px!important}
+ body:not(.locked) #couple .couple-text p:not(.signature){line-height:1.55!important}
+ body:not(.locked) #details .location-editorial{gap:12px!important}
+ body:not(.locked) #details .location-editorial iframe{height:240px!important}
+ body:not(.locked) #details .location-info h3{margin:7px 0!important}
+ body:not(.locked) #details .location-info p{margin:5px 0!important;line-height:1.55!important}
+ body:not(.locked) #details .location-actions{margin:11px 0!important;gap:8px!important}
+ body:not(.locked) #details .location-coordinate{margin:8px 0!important}
+ body:not(.locked) .footer-only-management{padding:17px 12px 21px!important}
+}
+@media(max-width:390px){body:not(.locked) #rundown,body:not(.locked) #gallery,body:not(.locked) #couple,body:not(.locked) #rsvp,body:not(.locked) #details{padding-block:13px!important}body:not(.locked) #rundown .rundown-feature{padding:15px!important}}
