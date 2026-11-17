@@ -1,0 +1,23 @@
+/* Slow luminous watercolor movement; keep original wedding palette and floral ornaments. */
+body:not(.locked) main>.hero,
+#rundown,#gallery,#couple,#details{
+  background-image:
+    radial-gradient(ellipse 45% 55% at 15% 24%,rgba(186,207,233,.31),transparent 78%),
+    radial-gradient(ellipse 44% 52% at 84% 76%,rgba(217,229,243,.43),transparent 78%),
+    linear-gradient(145deg,#faf9f6,#f0f5fa 50%,#faf9f6)!important;
+  background-size:160% 160%,160% 160%,100% 100%;
+  background-position:0% 10%,100% 90%,center;
+}
+@media(prefers-reduced-motion:no-preference){
+  body:not(.locked) main>.hero,#rundown,#gallery,#couple,#details{animation:wedding-watercolor-drift 22s ease-in-out infinite alternate}
+  #gallery,#details{animation-delay:-9s}
+  @keyframes wedding-watercolor-drift{
+    0%{background-position:0% 10%,100% 90%,center}
+    50%{background-position:50% 55%,45% 35%,center}
+    100%{background-position:100% 80%,0% 20%,center}
+  }
+  .hero-photo:before{animation:wedding-leaf-sway 10s ease-in-out infinite alternate;transform-origin:bottom center}
+  .hero-photo:after{animation:wedding-leaf-sway 12s ease-in-out -5s infinite alternate-reverse;transform-origin:bottom center}
+  @keyframes wedding-leaf-sway{from{rotate:-2deg;translate:0 0}to{rotate:3deg;translate:0 -7px}}
+}
+@media(prefers-reduced-motion:reduce){body:not(.locked) main>.hero,#rundown,#gallery,#couple,#details,.hero-photo:before,.hero-photo:after{animation:none!important}}

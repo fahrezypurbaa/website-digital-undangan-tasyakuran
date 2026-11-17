@@ -1,4 +1,4 @@
-# Website Undangan Syukuran — Pradipta & Frengky
+# Website Undangan Syukuran — Dipta & Frengky
 
 Website satu halaman, responsive, dengan foto asli pasangan, opening screen, countdown, rundown, lokasi Google Maps, kalender, RSVP, dan ucapan tamu.
 
