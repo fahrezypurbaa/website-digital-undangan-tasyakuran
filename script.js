@@ -1,6 +1,6 @@
 'use strict';
 const $=s=>document.querySelector(s);
-const address='Taman Sari Persada Raya, Blok M No. 8, Kelurahan Jatibening, Kecamatan Pondok Gede, Kota Bekasi';
+const address='-6.256626, 106.934530';
 const date=new Date('2026-11-22T09:00:00+07:00');
 const timeline=[
 {time:'09.00–10.00 WIB',icon:'✧',title:'Persiapan',desc:'60 menit'},
