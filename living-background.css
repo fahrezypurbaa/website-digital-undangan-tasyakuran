@@ -21,3 +21,18 @@ body:not(.locked) main>.hero,
   @keyframes wedding-leaf-sway{from{rotate:-2deg;translate:0 0}to{rotate:3deg;translate:0 -7px}}
 }
 @media(prefers-reduced-motion:reduce){body:not(.locked) main>.hero,#rundown,#gallery,#couple,#details,.hero-photo:before,.hero-photo:after{animation:none!important}}
+
+/* Clearly visible, airy blue petals and drifting light in the section backgrounds. */
+.wedding-motion-layer{position:absolute!important;inset:0;z-index:0!important;overflow:hidden;pointer-events:none;isolation:isolate}
+.wedding-motion-layer .wedding-petal{position:absolute;left:var(--x);top:110%;width:var(--size);height:calc(var(--size)*1.55);border-radius:70% 0 70% 0;background:linear-gradient(135deg,rgba(125,161,203,.55),rgba(204,222,241,.34));border:1px solid rgba(98,140,190,.23);box-shadow:0 0 16px rgba(142,175,213,.19);opacity:0;transform:rotate(30deg)}
+.wedding-motion-layer .wedding-glow{position:absolute;left:var(--x);top:var(--y);width:clamp(140px,22vw,340px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(156,194,234,.26),rgba(193,218,244,.10) 45%,transparent 70%);filter:blur(9px);opacity:.7}
+main>.hero>.wedding-motion-layer,main>.section>.wedding-motion-layer{z-index:0!important}
+main>.hero>.wedding-motion-layer~*,main>.section>.wedding-motion-layer~*{position:relative;z-index:1}
+@media(prefers-reduced-motion:no-preference){
+ .wedding-motion-layer .wedding-petal{animation:wedding-petal-float var(--duration) linear var(--delay) infinite}
+ .wedding-motion-layer .wedding-glow{animation:wedding-glow-drift 10s ease-in-out var(--delay) infinite alternate}
+ @keyframes wedding-petal-float{0%{top:108%;opacity:0;transform:translate3d(0,0,0) rotate(10deg)}12%{opacity:.65}75%{opacity:.6}100%{top:-12%;opacity:0;transform:translate3d(var(--drift),0,0) rotate(290deg)}}
+ @keyframes wedding-glow-drift{from{transform:translate3d(-22px,15px,0) scale(.9);opacity:.45}to{transform:translate3d(45px,-30px,0) scale(1.18);opacity:.85}}
+}
+@media(max-width:680px){.wedding-motion-layer .wedding-petal{opacity:.5}.wedding-motion-layer .wedding-glow{width:180px}}
+@media(prefers-reduced-motion:reduce){.wedding-motion-layer .wedding-petal{display:none}.wedding-motion-layer .wedding-glow{animation:none!important}}
