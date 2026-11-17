@@ -2,7 +2,17 @@
 const $=s=>document.querySelector(s);
 const address='Taman Sari Persada Raya, Blok M No. 8, Kelurahan Jatibening, Kecamatan Pondok Gede, Kota Bekasi';
 const date=new Date('2026-11-22T09:00:00+07:00');
-const timeline=[{time:'09.00 WIB',icon:'✧',title:'Penyambutan Tamu',desc:'Kehadiran keluarga dan para tamu undangan'},{time:'09.30 WIB',icon:'♡',title:'Doa Bersama',desc:'Mengawali acara dengan rasa syukur'},{time:'10.00 WIB',icon:'♧',title:'Ramah Tamah',desc:'Silaturahmi dan menikmati hidangan'},{time:'Selesai',icon:'✦',title:'Penutup',desc:'Terima kasih atas doa dan kehadiran Anda'}];
+const timeline=[
+{time:'09.00–10.00 WIB',icon:'✧',title:'Persiapan',desc:'60 menit'},
+{time:'10.00–10.05 WIB',icon:'✦',title:'Pembukaan oleh MC',desc:'5 menit'},
+{time:'10.05–10.10 WIB',icon:'❧',title:'Pembacaan Ayat Suci Al-Qur’an',desc:'5 menit'},
+{time:'10.10–10.20 WIB',icon:'♡',title:'Sambutan Tuan Rumah',desc:'Bapak Ilham Mendrofa · 10 menit'},
+{time:'10.20–10.25 WIB',icon:'✧',title:'Sambutan dari Pihak Tamu',desc:'5 menit'},
+{time:'10.25–11.00 WIB',icon:'❧',title:'Ceramah dan Nasihat Pernikahan',desc:'35 menit'},
+{time:'11.00–11.05 WIB',icon:'♡',title:'Doa Bersama',desc:'5 menit'},
+{time:'11.05–11.08 WIB',icon:'✦',title:'Penutup',desc:'3 menit'},
+{time:'Setelah acara',icon:'♧',title:'Dokumentasi dan Makan Siang',desc:'Silaturahmi dan menikmati hidangan'}
+];
 $('#timeline').innerHTML=timeline.map(x=>'<article class="timeline-item"><div class="timeline-icon" aria-hidden="true">'+x.icon+'</div><div class="timeline-dot"></div><time>'+x.time+'</time><h3>'+x.title+'</h3><p>'+x.desc+'</p></article>').join('');
 function tick(){let diff=Math.max(0,date-Date.now());let values=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60];['days','hours','minutes','seconds'].forEach((k,i)=>$('#'+k).textContent=String(values[i]).padStart(2,'0'))}tick();setInterval(tick,1000);
 const opening=$('#opening');function openInvite(){opening.classList.add('closed');document.body.classList.remove('locked');sessionStorage.setItem('inviteOpened','1');setTimeout(()=>opening.setAttribute('aria-hidden','true'),1000)}$('#openInvite').addEventListener('click',openInvite);if(sessionStorage.getItem('inviteOpened')==='1')openInvite();
