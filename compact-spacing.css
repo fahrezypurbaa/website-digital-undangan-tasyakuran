@@ -55,3 +55,28 @@ body:not(.locked) .footer{padding-top:24px!important;padding-bottom:18px!importa
  body:not(.locked) #couple{gap:13px!important}
  body:not(.locked) #rundown .timeline-item{padding-top:9px!important;padding-bottom:7px!important}
 }
+
+/* Third pass: minimal whitespace, with readable text and no content overlap. */
+body:not(.locked) main>.section:not(.hero){padding-top:12px!important;padding-bottom:14px!important}
+body:not(.locked) main>.hero{padding-top:12px!important;padding-bottom:14px!important}
+body:not(.locked) .section-heading{margin-bottom:7px!important}
+body:not(.locked) .section-heading h2{margin:0 0 2px!important}
+body:not(.locked) .section-heading .eyebrow{margin-bottom:2px!important}
+body:not(.locked) .section-heading .ornament{margin:0 auto!important}
+body:not(.locked) .section-heading p{margin-top:2px!important}
+body:not(.locked) .hero-copy>*+*{margin-top:3px!important}
+body:not(.locked) .hero .countdown{margin-bottom:4px!important}
+body:not(.locked) #rundown .timeline-item{padding-top:7px!important;padding-bottom:6px!important}
+body:not(.locked) #rundown .timeline-item h3{margin-top:2px!important;margin-bottom:1px!important}
+body:not(.locked) #rundown .timeline-item p{margin-top:1px!important}
+body:not(.locked) .fine-note{margin-top:6px!important}
+body:not(.locked) #gallery .gallery-instruction{margin-top:5px!important}
+body:not(.locked) #couple{gap:10px!important}
+body:not(.locked) .footer{padding-top:17px!important;padding-bottom:14px!important}
+@media(max-width:680px){
+ body:not(.locked) main>.section:not(.hero){padding-top:12px!important;padding-bottom:14px!important}
+ body:not(.locked) main>.hero{padding-top:12px!important;padding-bottom:14px!important}
+ body:not(.locked) .section-heading{margin-bottom:7px!important}
+ body:not(.locked) #rundown .timeline-item{padding-top:7px!important;padding-bottom:6px!important}
+ body:not(.locked) #couple{gap:10px!important}
+}
